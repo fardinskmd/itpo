@@ -334,14 +334,18 @@ export class AddTicketComponent implements OnInit {
   }
   aesKey: string = '2300072941601260';
 
-  optionalFields: string = '|||';
+  optionalFields: string = '';
   returnUrl: string =
-    'https://onlinespacebooking.indiatradefair.com/litf2k20/frontend/web/site/payresponse';
+    'https://onlinespacebooking.indiatradefair.com/iitf2k20/frontend/web/site/payresponse';
   referenceNo: string = Math.floor(100000 + Math.random() * 900000).toString();
   subMerchantId: string = '45';
-  transactionAmount: string = '${totalAmount}';
+  transactionAmount: string = '2000';
   payMode: string = '9';
-  mandatoryFields: string = `${this.referenceNo}|${this.subMerchantId}|${this.transactionAmount}||||`;
+  name: string = 'x';
+  bookingId: string = 'x';
+  eventName: string = 'x';
+  participationType: string = 'x';
+  mandatoryFields: string = `${this.referenceNo}|${this.subMerchantId}|${this.transactionAmount}|${this.name}|${this.bookingId}|${this.eventName}|${this.participationType}`;
 
   encryptFile(key: string, inputParam: string): string {
     const keyBytes = CryptoJS.enc.Utf8.parse(key);
@@ -379,8 +383,14 @@ export class AddTicketComponent implements OnInit {
       this.transactionAmount
     );
     const payModeEncrypted = this.encryptFile(this.aesKey, this.payMode);
+    console.log(
+      mandatoryFieldsEncrypted,
+      optionalFieldsEncrypted,
+      returnUrlEncrypted,
+      referenceNoEncrypted
+    );
 
-    const url = `https://eazypay.icicibank.com/EazyPG?merchantid=234165&mandatory fields=${mandatoryFieldsEncrypted}&optional fields=${optionalFieldsEncrypted}&returnurl=${returnUrlEncrypted}&Reference No=${referenceNoEncrypted}&submerchantid=${subMerchantIdEncrypted}&transaction amount=${transactionAmountEncrypted}&paymode=${payModeEncrypted}`;
+    const url = `https://eazypay.icicibank.com/EazyPG?merchantid=234165&mandatory fields=${mandatoryFieldsEncrypted}&optional fields=&returnurl=${returnUrlEncrypted}&Reference No=${referenceNoEncrypted}&submerchantid=${subMerchantIdEncrypted}&transaction amount=${transactionAmountEncrypted}&paymode=${payModeEncrypted}`;
 
     window.location.href = url;
   }
