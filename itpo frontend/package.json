@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular/animations": "~13.3.0",
     "@angular/cdk": "^13.3.9",
     "@angular/common": "~13.3.0",
@@ -34,6 +35,7 @@
     "datatables.net-buttons-dt": "^2.2.3",
     "datatables.net-dt": "^1.12.1",
     "file-saver": "^2.0.5",
+    "g": "^2.0.1",
     "jquery": "^3.6.1",
     "jszip": "^3.10.1",
     "ng-qrcode": "^7.0.0",

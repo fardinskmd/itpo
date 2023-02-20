@@ -35,18 +35,21 @@ export class AddTicketComponent implements OnInit {
   parmasData: any;
 
   constructor(
+    
     private fb: FormBuilder,
     private activedRoute: ActivatedRoute,
     private httpService: HttpService,
     private route: Router,
     private datepipe: DatePipe
   ) {
+    console.log("ho")
     console.log(Math.random().toString(36).slice(36) + new Date().getTime());
     // stringArr.push(S4);)
     this.myDatepipe = datepipe;
     // this.id=this.activedRoute.snapshot.paramMap.get('id')
 
     this.id = this.activedRoute.snapshot.paramMap.get('id');
+    console.log("Hi i'm vibhu")
     console.log(this.id);
     // this.httpService
     // .gettickettypebyid(this.id)
@@ -384,4 +387,5 @@ export class AddTicketComponent implements OnInit {
 
     window.location.href = url;
   }
+  
 }
