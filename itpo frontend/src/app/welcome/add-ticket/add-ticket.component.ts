@@ -42,14 +42,13 @@ export class AddTicketComponent implements OnInit {
     private route: Router,
     private datepipe: DatePipe
   ) {
-    console.log("ho")
     console.log(Math.random().toString(36).slice(36) + new Date().getTime());
     // stringArr.push(S4);)
     this.myDatepipe = datepipe;
     // this.id=this.activedRoute.snapshot.paramMap.get('id')
 
     this.id = this.activedRoute.snapshot.paramMap.get('id');
-    console.log("Hi i'm vibhu")
+    // console.log("Hi i'm vibhu")
     console.log(this.id);
     // this.httpService
     // .gettickettypebyid(this.id)
@@ -155,6 +154,33 @@ export class AddTicketComponent implements OnInit {
       j--;
     }
   }
+  calculate(i:any) {
+    console.log(i);
+    let controls = this.myForm.get('arr') as FormArray;
+    let option:any=controls.at(i).get('ticketid');
+    let opt=option.value;//price
+    //console.log(opt);
+    
+    let num:any=controls.at(i).get('count')//count
+    //console.log("count=",num.value);
+    let totalAmount=Number(opt)*Number(num.value);
+    //console.log(totalAmount);
+    //this.myForm.value.totalPrice=totalAmount;
+    controls.at(i).get('totalPrice')?.setValue(totalAmount);
+    let sum=0;
+    for(let j=0;j<controls.length;j++){
+      //find total amount from all list
+      sum=sum+Number(controls.at(j).get('totalPrice')?.value);
+      
+    }
+   // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
+      this.myForm.get('totalPrice')?.setValue(sum);
+    // let total:any=document.getElementById("totalPre");
+    // total.value=totalAmount;
+    
+   
+    //console.log(option.value);
+  }
 
   removeItem(i: any) {
     let controls = this.myForm.get('arr') as FormArray;
@@ -178,6 +204,14 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
+    let sum=0;
+    for(let k=0;k<controls.length;k++){
+      //find total amount from all list
+      sum=sum+Number(controls.at(k).get('totalPrice')?.value);
+      
+    }
+   // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
+      this.myForm.get('totalPrice')?.setValue(sum);
   }
 
   onSubmit() {
@@ -276,10 +310,12 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
+    this.calculate(i)
   }
 
   decrement(i: any) {
     let controls = this.myForm.get('arr') as FormArray;
+    
     let count = 0;
     if (Number(controls.at(i).value.count) != 0) {
       count = Number(controls.at(i).value.count) - 1;
@@ -311,6 +347,7 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
+    this.calculate(i)
   }
 
   payNow() {

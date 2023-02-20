@@ -68,7 +68,7 @@ app.get("*", function (req, res) {
   fs.stat(root + req.path, function (err) {
     if (err) {
       res.sendFile("index.html", { root });
-      document;
+      //document;
     } else {
       res.sendFile(req.path, { root });
     }

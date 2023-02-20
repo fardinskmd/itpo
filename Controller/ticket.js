@@ -117,6 +117,7 @@ let getticketbyid = await ticketss.findOne({id:req.params._id})
 
   module.exports.getpricebyid = async (req, res, next) => {
    let ticketid = req.body.ticketid;
+   console.log(ticketid)
 
     let resultData = await prices.find({ticketid:req.body.ticketid})
     console.log(req.body)

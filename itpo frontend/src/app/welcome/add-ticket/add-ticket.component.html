@@ -20,24 +20,19 @@
                     <div class="row form_field_outer_row">
                       <div class="form-group col-md-3">
                         <select
+                          
                           formControlName="ticketid"
                           class="form-control"
-                          (change)="getState(i)"
+                          (change)="calculate(i)"
                         >
-                          <option>Select Ticket Type</option>
-                          <option value="63f344ce76d234fb4402352b">
+                          <option value="0">
+                          Choose citizen type
+                          </option><option value="20">
                             Adult
                           </option>
-                          <option value="63f344e26b967ad9ab9a7c9c">
+                          <option value="10">
                             Child
                           </option>
-                          <!-- <option value="636b010d90351e553fa1afa7">
-                            Season Ticket All 9 Non-Buisnees Days
-                          </option>
-
-                          <option value="636b017790351e553fa1afab">
-                            Daily Ticket
-                          </option> -->
                         </select>
                       </div>
                       <div
@@ -70,8 +65,8 @@
                           (change)="getState(i)"
                         >
                           <option>--Select Citizen Type--</option>
-                          <option>Adult</option>
-                          <option>Child</option>
+                          <option value="A">Adult</option>
+                          <option value="C">Child</option>
                         </select>
                       </div>
                       <div class="form-group col-md-2">
@@ -79,10 +74,11 @@
                           <button
                             class="btn btn-default"
                             (click)="decrement(i)"
+                            
                           >
                             -
                           </button>
-                          <input
+                          <input 
                             class="form-control"
                             readonly
                             style="
@@ -93,10 +89,12 @@
                             formControlName="count"
                             type="text"
                             readonly
+                            
                           />
                           <button
                             class="btn btn-default"
                             (click)="increment(i)"
+                            
                           >
                             +
                           </button>
@@ -104,6 +102,7 @@
                       </div>
                       <div class="form-group col-md-2">
                         <input
+                        id="totalPre"
                           readonly
                           name="total"
                           formControlName="totalPrice"
