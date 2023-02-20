@@ -1,29 +1,47 @@
 <nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" (click)="Product()"><img src="../../../assets/img/itpo-event/IITF-logo.png"
-                    alt=""></a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a (click)="aboutus()">About Us</a></li>
-            <li class="active"><a (click)="contactus()">Contact Us</a></li>
-            <li class="active"><a (click)="privacypolicy()">Privacy Policy</a></li>
-            <li class="active"><a (click)="termsandconditions()">Terms And Conditions</a></li>
-            <li class="active"><a (click)="refundcancellation()">Refund And Cancellation Policy</a></li>
-
-        </ul>
-
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" (click)="Product()"
+        ><img src="../../../assets/img/itpo-event/ITPO_LOGO.png" alt=""
+      /></a>
     </div>
-    <!-- <span class="active login-btn"><a (click)="login()">Login</a></span> -->
+    <ul class="nav navbar-nav">
+      <li class="active"><a (click)="aboutus()">About Us</a></li>
+      <li class="active"><a (click)="contactus()">Contact Us</a></li>
+      <li class="active"><a (click)="privacypolicy()">Privacy Policy</a></li>
+      <li class="active">
+        <a (click)="termsandconditions()">Terms And Conditions</a>
+      </li>
+      <li class="active">
+        <a (click)="refundcancellation()">Refund And Cancellation Policy</a>
+      </li>
+    </ul>
+  </div>
+  <!-- <span class="active login-btn"><a (click)="login()">Login</a></span> -->
 </nav>
 
 <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a (click)="aboutus()" onclick="closeNav()">About Us</a>
-    <a (click)="contactus()" onclick="closeNav()">Contact Us</a>
-    <a (click)="privacypolicy()" onclick="closeNav()">Privacy Policy</a>
-    <a (click)="termsandconditions()" onclick="closeNav()">Terms And Conditions</a>
-    <a (click)="refundcancellation()" onclick="closeNav()">Refund And Cancellation Policy</a>
-    <a style="text-align: center; padding: 8px 8px;" class="btn btn-primary" (click)="login()" btn-btn-default>Login</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a (click)="aboutus()" onclick="closeNav()">About Us</a>
+  <a (click)="contactus()" onclick="closeNav()">Contact Us</a>
+  <a (click)="privacypolicy()" onclick="closeNav()">Privacy Policy</a>
+  <a (click)="termsandconditions()" onclick="closeNav()"
+    >Terms And Conditions</a
+  >
+  <a (click)="refundcancellation()" onclick="closeNav()"
+    >Refund And Cancellation Policy</a
+  >
+  <a
+    style="text-align: center; padding: 8px 8px"
+    class="btn btn-primary"
+    (click)="login()"
+    btn-btn-default
+    >Login</a
+  >
 </div>
-<span class="menu-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<span
+  class="menu-btn"
+  style="font-size: 30px; cursor: pointer"
+  onclick="openNav()"
+  >&#9776;
+</span>
