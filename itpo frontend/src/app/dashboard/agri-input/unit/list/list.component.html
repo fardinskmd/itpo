@@ -1,0 +1,76 @@
+
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <!-- main header -->
+    <div class="bg-blue lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="m-n font-thin text-white">Unit </h3>
+        </div>
+        <div class="col-sm-6 text-right poppins hidden-xs">
+          <!-- <button class="btn btn-sm text-10 btn-primary m-r-xs report_print_triger"><i class="fa fa-print"></i>
+            Print</button>
+          <button class="btn btn-sm text-10 btn-info m-r-xs report_excel_triger"><i class="fa fa-file-excel-o"></i>
+            XLSX</button> -->
+          <button class="btn btn-sm text-10 btn-success m-r-xs report_csv_triger"><i class="fa fa-plus"></i>
+            <a  (click)="addUnit()">Add Unit</a></button>
+          <!-- <button class="btn btn-sm text-10 btn-info  m-r-xs report_print_triger"> <i class="fa fa-plus"></i>
+                <a  href="/ro-add"> Product Category</a></button> -->
+          <!-- <div class="col-sm-6 text-right hidden-xs"> <a class="btn m-b-xs w-xs btn-sm btn-success" href="">Vehicle</a> </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card no-shadow">
+          <div class="tab-content bg-seashell">
+            <div role="tabpanel" class="tab-pane active g-py-0">
+              <div class="row row-xs">
+
+                <table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table bg-white">
+                  <thead>
+                    <tr role="row">
+                      <th class="text-center">S.No</th>
+                      <th>Unit Code</th>
+                      <th>Unit Name </th>
+                      <!-- <th>Brand Description</th> -->
+                      <!-- <th>Address Info</th> -->
+                      <!-- <th>Type</th> -->
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getData; let i= index;">
+                      <td class="text-center">{{ [i+1] }}</td>
+                      <td><span class="font-bold text-theme">{{data?.unitCode}}</span> </td>
+                      <td><span class="font-bold text-theme">{{data?.unitName}}</span> </td>
+                      <!-- <td><span class="font-bold text-theme">{{data?.brandDescription}}</span></td> -->
+                      <!-- <td><span class="font-bold text-theme">{{data?.taxType}}</span></td> -->
+                      <td class="text-center">
+                        <div class="btn-group dropdown">
+                          <button class="btn btn-default w-xxs btn-sm r-2x" data-toggle="dropdown"
+                            aria-expanded="false"><i class="fa fa-cog g-px-5  text-info text-sm"></i> <span class=""><i
+                                class="fa fa-caret-down"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a (click)="delete(data?._id)"><i class="fa fa-trash-o"></i> Delete </a>
+                              <a (click)="edit(data?._id)"><i class="fa fa-edit"></i> Edit </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

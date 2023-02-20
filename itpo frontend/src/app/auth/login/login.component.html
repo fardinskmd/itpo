@@ -1,0 +1,138 @@
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function validateForm() {
+    let x = document.forms["myForm"]["g-recaptcha-response"].value;
+    if (x == "") {
+      alert("Captcha must be filled out");
+      return false;
+    }
+  }
+</script>
+
+<!-- content1 -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="timer" [fullScreen]="true">
+  <p style="color: white">
+    Hold on while we take you to your Bioveda Account!
+  </p>
+</ngx-spinner>
+
+<section class="main-bg">
+  <a href="javascript:void(0)" target="blanck" class="qr-img"></a>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="food-img-bg">
+          <div class="top-logo">
+            <img src="../../../assets/img/itpo-event/new-itpo-logo.png" alt="" class=""> 
+            <!-- <img src="./assets/img/srlm-logo.png" alt=""  class="UPSRLM">  -->
+          </div>
+          <div class="main-bg-con">
+            <div class="row g-0">
+              <div class="col-lg-8">
+                <div class="left-content">
+                  <h3>Welcome to<br>
+                    <p style="display: block; font-size: 4rem; margin: 10px 0px;">India International Trade Fair 2022</p>
+                  </h3>
+                  <!-- <p><img src="./assets/img/jiva.png" alt="" /></p> -->
+                  <p style="
+                      margin-bottom: 1rem;
+                      margin-top: 1rem;
+                      background:linear-gradient(to left, #c99740 0%, #fcf0a8 20%, #c6923c 40%, #fcf0a8 60%, #ecb55a 100%);
+                      color: #000000;
+                      padding: 5px;
+                      width: 35rem;
+                      font-size: 1.7rem;
+                    ">
+                    All the the tickets you need, in one place
+                  </p>
+                  <div class="clearfix"></div>
+                  <div class="Bottom-Content">
+                    <p class="mid_cont">India Trade Promotion Organisation(ITPO) , the premier trade promotion enterprise of the Ministry of Commerce &
+                    Industry, Government of India is committed to showcase excellence achieved by the country in diverse fields especially
+                    trade and commerce.
+                    </p>
+
+
+                    <div class="copyrightline">
+                      <p>
+                        © 2022-23 | All Right Reserved | Version 1.0.1 | Last Update
+                        {{date || 'MMMM d, y'}}
+                      </p>
+                      <!-- <h5>Implemented By:</h5> -->
+                    </div>
+                    <!-- <div class="footer_img">
+                      <img src="../../../assets/img/itpo-event/styam-logo.jpeg" alt="">
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="login-sec">
+                  <h2>Admin Login</h2>
+                  <p>Login to IITF Portal</p>
+                  <div class="login-sec-con">
+                    <form [formGroup]="checkoutForm" method="post" formControlName="myForm">
+                      <div class="">
+                        <div class="form-group">
+                          <input type="text" class="form-control user-bg" id="uername" placeholder="Uername"
+                            formControlName="email" [readonly]="this.active" />
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="form-group">
+                          <input type="password" class="form-control user-password" id="" placeholder="Password"
+                            formControlName="password" [readonly]="this.active" />
+                        </div>
+                      </div>
+                      <!-- <div class="">
+                        <div class="form-group">
+                          <re-captcha (resolved)="resolved($event)" siteKey="6LcZYWYeAAAAAFFzV_pFdZBksDadFNggfpxTZMfS">
+                          </re-captcha>
+                        </div>
+                      </div> -->
+                      <!-- <span class="msg-error error text-danger">hello</span> -->
+
+                      <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-lg btn-block login_btn" id="btn-validate"
+                          (click)="SubmitLogin();">Login</button>
+                        <!-- <a
+                          href="/dashboard"
+                          class="btn btn-primary btn-lg login_btn"
+                          style="width: 100%; text-decoration: none"
+                          >Login</a
+                        > -->
+                      </div>
+
+                      <!-- <div>
+                        <a href="/forgot-password" class="remember_me">Remember Me</a>
+                        <a href="/forgot-password" class="forget_password">Forgot Password?</a>
+                      </div> -->
+
+                      <div class="clearfix"></div>
+
+                      <!-- <p class="Create_Account">New to CII FACE Assessment Portal?<a href="/signUp"> Sign Up</a>
+                </p> -->
+
+                      <div class="captcha-text">
+                        <p>
+                          Protected by reCAPTCHA. Google
+                          <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>
+                          &
+                          <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+                          apply.
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

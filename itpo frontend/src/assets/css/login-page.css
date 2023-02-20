@@ -1,0 +1,208 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+.comfortaa {
+  font-family: 'Comfortaa', cursive;
+}
+.fullheight {
+  height: 100vh;
+}
+.bgWhite {
+  background-color: #ffffff;
+}
+.bgBlue {
+  background-color: #0f0547;
+}
+.bgOrange {
+  background-color: #ff5a17;
+}
+.boxSection {
+  position: absolute;
+  width: 55%;
+  top: 12%;
+  right: 10%;
+}
+.form-control {
+  /*border-color: #b8bcbd;*/
+  height: 45px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 0px;
+}
+.input-group-addon {
+  border-radius: 6px;
+}
+.g-px-5 {
+  padding: 0 5px;
+}
+.g-font-weight-800 {
+  font-weight: 800;
+}
+.g-font-light {
+  color: #666666;
+}
+.g-font-blue{
+  color: #63bce8
+}
+.i-checks input:checked+i {
+  border-color: #ccc;
+}
+.i-checks input:checked+i:before {
+  background-color: #7266ba;
+}
+.login_left_side {
+  overflow: hidden;
+  padding: 1.1rem;
+}
+.sub_head {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  margin-bottom: 2%;
+}
+.sub_title {
+  color: #5d5b5b;
+    font-size: .9rem;
+}
+.login_right_side {
+  padding: 2rem;
+}
+
+ @media only screen and (max-width: 600px) {
+.block-entry.fullheight {
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%) ! important;
+}
+.g-font-light {
+  color: #fffefe;
+}
+}
+
+  /* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+ -webkit-text-fill-color: green;
+ -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+ transition: background-color 5000s ease-in-out 0s;
+}
+/*icon checkbox*/
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+}
+.checkbox label .checkbox-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border: 1.5px solid #63bce8;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 6px;
+  font-size: 10px;
+}
+.checkbox label .checkbox-icon-wrapper:hover {
+  border-color: #63bce8;
+  transition: all .2s ease-in-out;
+}
+.checkbox label input[type="checkbox"]:hover+.checkbox-icon-wrapper {
+  border-color: #63bce8;
+  transition: all .2s ease-in-out;
+}
+.checkbox label input[type="checkbox"]:checked+.checkbox-icon-wrapper {
+  border-color: #63bce8;
+  background: #63bce8;/* box-shadow: 0 3px 6px rgba(247, 108, 36, 0.18), 0 3px 6px rgba(247, 108, 36, 0.31); */
+}
+.checkbox label .checkbox-icon-wrapper .checkbox-icon {
+  position: relative;
+  top: 20%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+.checkbox label input[type="checkbox"]+.checkbox-icon-wrapper>.checkbox-icon {
+  opacity: 0;
+  transform: scale(1);
+}
+.checkbox label input[type="checkbox"]:checked+.checkbox-icon-wrapper>.checkbox-icon {
+  transform: scale(1);
+  opacity: 1;
+  color: #fff;
+}
+.checkbox label input[type="checkbox"]+.checkbox-icon-wrapper>.checkbox-icon {
+  color: #fff;
+  opacity: 0;
+  transform: scale(1);
+  transition: all .1s ease-in;
+}
+.checkbox label input[type="checkbox"]:checked+.checkbox-icon-wrapper>.checkbox-icon {
+  transform: scale(1);
+  opacity: 1;
+}
+.p-l-0 {
+  padding-left: 0 !important;
+}
+.p-r-0 {
+  padding-right: 0 !important;
+}
+.m-t-5 {
+  margin-top: 5%;
+}
+.m-b-5 {
+  margin-bottom: 5%;
+}
+.m-b-2 {
+  margin-bottom: 2%;
+}
+.m-r-3 {
+  margin-right: 3%;
+}
+.leftTextFont {
+  font-size: .7rem;
+  margin-bottom: .5rem;
+}
+.btnLogin {
+  padding: 10px 20px;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #3c7bfd;
+  border: 1px solid #0e53e2;
+  line-height: 18px;
+  border-radius: .5rem;
+  color: #ffffff;
+}
+.btnLogin:hover {
+  border: 1px solid #0e53e2;
+  background-color: #0e53e2;
+  color: #ffffff;
+} 
+.pwd {
+  border-right: 0px;
+}
+.btn:focus {
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25);
+  border-color: #cfdadd;
+}
+.form-control:focus {
+    border-color: #cfdadd;
+}
+.pwdEye {
+  padding: 9.4px;
+  border-radius: 0px;
+  background-color: #fff;
+  border: 1px solid #cfdadd;
+  border-left: 0px;
+}
+.footerMsg {
+  position: absolute;
+  bottom: 0%;
+  left: 8%;
+  right: 5%;
+}
+/*icon checkbox*/

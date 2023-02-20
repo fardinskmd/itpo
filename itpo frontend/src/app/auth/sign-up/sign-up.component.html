@@ -1,0 +1,185 @@
+
+<!-- <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="timer" >
+  <p style="color: white"> Hold on while we create your CII FACE Applicant Account!</p>
+</ngx-spinner> -->
+<section class="main-bg">
+  <a href="javascript:void(0)" target="blanck" class="qr-img"></a>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="food-img-bg">
+
+          <div class="top-logo">
+            <img src="../../assets/img/login-img/troology-logo.png" alt="" class="">
+            <!-- <img src="../../assets/img/CII-Face.png" alt="" class="cii-face"> -->
+          </div>
+
+          <div class="main-bg-con">
+            <div class="row g-0">
+              <div class="col-lg-8">
+                <div class="left-content">
+                  <div class="welcomQr">
+                    <div>
+                      <h3>Welcome back!</h3>
+                      <h4>Experience the all new digital<br> transformation experience</h4>
+                    </div>
+                    <img src="../../assets/img/login-img/iq.png" alt="" class="mb-2">
+                  </div>
+                  <div class="Bottom-Content">
+                    <p>TROOLOGY, an ISO/IEC 27001:2013 & ISO 9001:2015 certified organization, is a group started by young, dynamic and experienced professionals in the field of Information Technology & Allied Services. We strive to deliver the technologically driven values to your business process and streamlining the organization wide processes.</p>
+                    <p>With substantial experience in delivering small, medium & large scale Websites Web-based Applications, Mobile Applications, eGovernance Consulting, industrial Solutions. TRODLOGY has set a benchmark in its field with its quality and service-oriented approach for its esteemed clients.</p>
+                    <div class="SupportBtn">
+                      <a href="javascript:void(0)">Support</a>
+                    </div>
+                    <div class="infoSection">
+                      <ul>
+                        <li> <a href="mailto:info@troology.com" ><img src="../../assets/img/login-img/mail.png" alt=""> info@troology.com</a></li>
+
+                        <li> <a href="tel:+4733378901" ><img src="../../assets/img/login-img/call.png" alt="">(+91) 522 430 8080 | 1800 123 1234</a></li>
+
+                        <li> <a href="mailto:info@troology.com" ><img src="../../assets/img/login-img/globe.png" alt=""> www.troology.com</a></li>
+                      </ul>
+                    </div>
+                    <p class="copyrightline">Copyright 2021-22 | All Right Reserved</p>
+                    <div class="footer_img">
+                      <ul>
+                        <li><img src="../../assets/img/login-img/gem.png" alt=""></li>
+                        <li><img src="../../assets/img/login-img/iso-9001.png" alt=""></li>
+                        <li><img src="../../assets/img/login-img/iso-27001.png" alt=""></li>
+                        <li><img src="../../assets/img/login-img/msme.png" alt=""></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="login-sec">
+                  <h2>Let's get started</h2>
+                  <p>Create your account with us to get started</p>
+                  <div class="login-sec-con">
+                    <form>
+                      <div class="col-md-12">
+                        <div class="form-group userRadio">
+                          <input type="radio"  formControlName="type" value="applicant"> Applicant
+                          <input type="radio"  formControlName="type" value="assessor"> Assessor
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control user-bg" id="email" formControlName="username"
+                            placeholder="Full Name">
+                        </div>
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div><small>Name is required</small></div>
+                        </div> -->
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="email" formControlName="email" class="form-control email-bg" id="email" placeholder="Email">
+                        </div>
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div>
+                            <small>Email is required</small>
+                          </div>
+                        </div> -->
+
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div><small>Email is not valid</small></div>
+
+                        </div> -->
+
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+
+                          <input type="number" class="form-control mobile-bg" formControlName="mobile"
+                            placeholder="Mobile No." type="text" maxlength="10" minlength="10"
+                            (keypress)=_keyPress($event)>
+
+                        </div>
+
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div><small>Mobile No. is required</small></div>
+                        </div> -->
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div>Please, Enter 10 digit Mobile Number.</div>
+
+                        </div> -->
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="password" class="form-control user-password" id="password"
+                          placeholder="Password" formControlName="password">
+                        </div>
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div><small>Password is
+                            required.</small>
+                          </div>
+                          <div><small>Minimum 8 character password.</small></div>
+                          <div><small>Use uppercase and lowecase letters(e.g.Aa)</small></div>
+                          <div><small>Use a number(e.g 123)</small></div>
+                          <div><small>Use special character (e.g @#%).</small></div>
+                        </div> -->
+
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="password" class="form-control confirm-password" id="confirm_password"
+                        placeholder="Confirm Password" formControlName="confirm_password" >
+                        </div>
+
+                        <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                          <div><small>Confirm Password is required.</small>
+                          </div>
+                        </div> -->
+                      <!-- <div class="text-danger text-left mb-1 errorcontrols">
+                        <div><small>Password and Confirm Password are not matching.</small></div>
+                      </div> -->
+
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login_btn">Sign Up</button>
+                      </div>
+
+                      <p class="Create_Account text-center mt-2">Already have an account?<a href="/login"> Login Here</a></p>
+                    </form>
+                  </div>
+                </div>
+                <!-- <div class="login-sec">
+                  <br/>
+                  <br /><br /><br /><br />
+                  <div class="card-body text-center">
+                    <img src="https://img.icons8.com/bubbles/200/000000/trophy.png" style="width: 50%" />
+                    <h4>CONGRATULATIONS!</h4>
+                    <br/>
+                    <p style="font-size: 1.5rem;color: #739002;">An e-mail has been sent at <b></b>! Kindly activate your CII Applicant account by verifying your e-mail.</p>
+
+                  </div>
+                </div> -->
+                <!-- <div class="login-sec">
+                  <br />
+                  <br /><br /><br /><br />
+                  <div class="card-body text-center">
+                    <img src="../../assets/img/maintanance.png" style="width: 50%" />
+                    <h4>System Under Maintenance!</h4>
+                    <br />
+                    <p style="font-size: 1.5rem;color: #739002;">We are improving your experience and shall be back by 2100 Hours (IST). Kindly visit again!</p>
+
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="troo-logo"> <a href="https://www.troology.com/" target="_blank"><img src="../../assets/img/Footer.svg" alt=""></a> </div>-->
+      </div>
+    </div>
+  </div>
+</section>

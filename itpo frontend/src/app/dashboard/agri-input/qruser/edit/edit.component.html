@@ -1,0 +1,97 @@
+
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <!-- main header -->
+    <div class="bg-blue lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="m-n font-thin text-white">Brand</h3>
+        </div>
+        <div class="col-sm-6 text-right poppins hidden-xs">
+
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div  class="wrapper-md">
+      <div class="panel b-a">
+        <div class="panel-body">
+          <form role="form" [formGroup]="brand"  autocomplete="off">
+            <div class="row">
+              <div class="col-md-12">
+                <legend>
+                  <span  class="font-weight-600">Edit Brand</span>
+                </legend>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label font-weight-600">Select Language</label>
+                    <select class="form-control " formControlName="language" name="" >
+                      <option *ngFor="let item of languages" value="{{item.language}}">
+                        {{item.language}}</option>
+                  
+                    </select>
+                </div>
+            </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label font-weight-600">Brand Code *</label>
+                  <input formControlName="brandCode" type="text" class="form-control" (focusout)="checkCode($event)">
+
+                  <p *ngIf="brand.get('brandCode')?.hasError('required')&&(submitted||brand.get('brandCode')?.dirty||brand.get('brandCode')?.touched )"
+                  style="color: red;">
+                  Brand Code <strong>Required</strong>
+                </p>
+                     <p *ngIf="brand.get('brandCode')?.hasError('isExist')&&!brand.get('brandCode')?.hasError('required')&&(submitted||brand.get('brandCode')?.dirty||brand.get('brandCode')?.touched )"
+                style="color: red;">
+                Brand Code <strong>Already Exist</strong>
+              </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label font-weight-600">Brand Name*</label>
+                  <br>
+                  <input formControlName="brandName" type="text" class="form-control" >
+
+                  <p *ngIf="brand.get('brandName')?.hasError('required')&&(submitted||brand.get('brandName')?.dirty||brand.get('brandName')?.touched )"
+                  style="color: red;">
+                  Brand Name<strong>Required</strong>
+                </p>
+
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="control-label font-weight-600">Brand Description*</label>
+                    <input formControlName="brandDescription" type="text" class="form-control">
+                    <p *ngIf="brand.get('brandDescription')?.hasError('required')&&(submitted||brand.get('brandDescription')?.dirty||brand.get('brandDescription')?.touched )"
+                    style="color: red;">
+                    Brand Description <strong>Required</strong>
+                  </p>
+                  </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <hr />
+            <div class="button-right">
+              <div class="row">
+                <div class="col-md-12">
+                   <a class="btn m-b-xs btn-md btn-success mr-5" style="margin-right:1.5px ;" (click)="onSubmit()">Update</a>
+
+                  <!-- <a class="btn m-b-xs btn-md btn-primary mr-5 " style="margin-right:1.5px ;"  (click)="onSubmitNew()">Save and New</a> -->
+                  <a class="btn m-b-xs btn-md btn-default mr-5" style="margin-right:1.5px ;" (click)="cancel()">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

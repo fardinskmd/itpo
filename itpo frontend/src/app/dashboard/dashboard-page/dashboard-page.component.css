@@ -1,0 +1,152 @@
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000000;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(156, 156, 173, 0.25) 0px 6px 12px -2px, rgb(192, 192, 192) 0px 3px 5px -1px;
+
+}
+
+/* .box1 {
+    background: url(../../../assets/img/dashboard-slices/download-app.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 40%;
+}
+
+.box2 {
+    background: url(../../../assets/img/dashboard-slices/farmar.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 33%;
+}
+
+.box3 {
+    background: url(../../../assets/img/dashboard-slices/agreement.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 34%;
+}
+
+.box4 {
+    background: url(../../../assets/img/dashboard-slices/mitra.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 35%;
+}
+
+.box5 {
+    background: url(../../../assets/img/dashboard-slices/appontment.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 36%;
+}
+
+.box6 {
+    background: url(../../../assets/img/dashboard-slices/order.png) no-repeat #ffffff;
+    background-position-x: right;
+    background-size: 36%;
+} */
+
+.box h6 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.box img {
+    width: 27px;
+    margin: 0 7px 4px 0;
+}
+
+.box h3 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.7rem 0;
+}
+
+.border-line {
+    border-bottom: 3px solid;
+}
+
+.notice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice p {
+    font-size: 9px;
+    margin: 12px 0 0 0;
+
+}
+
+.notice span {
+    font-weight: bold;
+
+    font-size: 10px;
+}
+
+.mt {
+    margin-top: 2.5rem;
+}
+
+.tc1 {
+    color: #f49e54;
+}
+
+.tc2 {
+    color: #80b44e;
+}
+
+.tc3 {
+    color: #f14e62;
+}
+
+.tc4 {
+    color: #f8b415;
+}
+
+.tc5 {
+    color: #274568;
+}
+
+.tc6 {
+    color: #2489ff;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 320px) {
+    .mt {
+        margin-top: 0%;
+    }
+
+    .box2 {
+        margin-top: 2rem;
+    }
+
+    .box3 {
+        margin-top: 2rem;
+    }
+
+    .box4 {
+        margin-top: 2rem;
+    }
+
+    .box5 {
+        margin-top: 2rem;
+    }
+
+    .box6 {
+        margin-top: 2rem;
+    }
+
+}

@@ -1,0 +1,99 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body">
+    <!-- main header -->
+    <div class="bg-blue lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="m-n font-thin text-white">Dashboard</h3>
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div class="wrapper-md">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box box1">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt="">Number Of Booking</h6>
+            <h3 class="tc1">{{this.getValue}}</h3>
+            <div class="border-line tc1"></div>
+            <div class="notice">
+              <!-- <p><span>+10</span> SINCE LAST WEEK</p> -->
+              <p><span>Last updated | 
+                {{date || 'MMMM d, y'}}
+              </span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box box2">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt="">Today's Entry</h6>
+            <h3 class="tc2">{{this.getValues}}</h3>
+            <div class="border-line tc2"></div>
+            <div class="notice">
+              <!-- <p><span>+10</span> SINCE LAST WEEK</p> -->
+              <p><span>Last updated | 
+                {{date || 'MMMM d, y'}}
+              </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box box3">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt="">Number Of Scanned User</h6>
+            <h3 class="tc3">{{this.getValues}}</h3>
+            <div class="border-line tc3"></div>
+            <div class="notice">
+              <!-- <p><span>+10</span> SINCE LAST WEEK</p> -->
+              <p><span>Last updated | 
+                {{date || 'MMMM d, y'}}
+              </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt">
+        <div class="col-md-4">
+          <div class="box box4">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt=""> Received Payment</h6>
+            <h3 class="tc4">{{this.totalamount}}</h3>
+            <div class="border-line tc4"></div>
+            <div class="notice">
+            <p><span>Last updated |
+                {{date || 'MMMM d, y'}}
+              </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box box5">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt="">Total Business Days Booking</h6>
+            <h3 class="tc5">{{this.getValuesss[0]?.Price}}</h3>
+            <div class="border-line tc5"></div>
+            <div class="notice">
+              <p><span>Last updated |
+                  {{date || 'MMMM d, y'}}
+                </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box box6">
+            <h6> <img src="../../../assets/img/itpo-event/favi.png" alt="">Total Non Business Days Booking</h6>
+            <h3 class="tc6">{{this.new}}</h3>
+            <div class="border-line tc6"></div>
+            <div class="notice">
+              <p><span>Last updated |
+                  {{date || 'MMMM d, y'}}
+                </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

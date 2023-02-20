@@ -1,0 +1,6 @@
+.bg-light.lter, .bg-light .lter {
+  background:repeating-linear-gradient(45deg, #3c0002, #3c0002 30px, #4c0708 30px, #4c0708 50px);
+}
+.navbar-brand img{
+  width: 230px;
+}

@@ -1,0 +1,90 @@
+.wrapper-md {
+    padding: 20px 0;
+}
+
+.cunt-number {
+    margin: 0 20px;
+    cursor: no-drop;
+}
+.counter-velue{
+    text-align: center;
+    display: flex;
+}
+
+
+.header-tital h3 {
+    border-bottom: 1px solid #3c0002;
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    margin: 0%;
+    background: repeating-linear-gradient(45deg, #3c0002, #3c0002 30px, #4c0708 30px, #4c0708 50px);
+}
+
+.Proceed-pay a {
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff !important;
+    margin: 0%;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 30%);
+    width: 100%;
+    border: 0px solid #cfdadd;
+    /* margin-top: 1rem; */
+    background-color: #c99740;
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.content {
+    height: 91%;
+}
+
+th {
+    font-size: 15px;
+}
+
+td {
+    border: none !important;
+}
+
+.font-bold {
+    color: #178b44;
+}
+
+.book-now {
+    width: 100%;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 2rem;
+    background: linear-gradient(to left, #c99740 0%, #fcf0a8 20%, #c6923c 40%, #fcf0a8 60%, #ecb55a 100%);
+    color: #000000;
+
+}
+
+.detail {
+    padding: 1.5rem;
+}
+
+.payment-total {
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 16%);
+}
+
+.payment-total th {
+    text-align: center;
+    border: 1px solid #cfdadd;
+    background: #FFF none repeat scroll 0% 0%;
+
+}
+
+@media only screen and (max-width: 991px) {
+    .row-flex {
+        display: block;
+    }
+
+}

@@ -1,0 +1,66 @@
+
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <!-- main header -->
+    <div class="bg-blue lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="m-n font-thin text-white">User </h3>
+        </div>
+        <div class="col-sm-6 text-right poppins hidden-xs">
+          <!-- <button class="btn btn-sm text-10 btn-primary m-r-xs report_print_triger"><i class="fa fa-print"></i>
+            Print</button>
+          <button class="btn btn-sm text-10 btn-info m-r-xs report_excel_triger"><i class="fa fa-file-excel-o"></i>
+            XLSX</button> -->
+          <button class="btn btn-sm text-10 btn-success m-r-xs report_csv_triger"><i class="fa fa-plus"></i>
+            <a (click)="addBrand()">Add User </a></button>
+          <!-- <button class="btn btn-sm text-10 btn-info  m-r-xs report_print_triger"> <i class="fa fa-plus"></i>
+                <a  href="/ro-add"> Product Category</a></button> -->
+          <!-- <div class="col-sm-6 text-right hidden-xs"> <a class="btn m-b-xs w-xs btn-sm btn-success" href="">Vehicle</a> </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card no-shadow">
+          <div class="tab-content bg-seashell">
+            <div role="tabpanel" class="tab-pane active g-py-0">
+              <div class="row row-xs" style="overflow: auto;">
+
+                <table   class="table bg-white">
+                  <thead>
+                    <tr role="row">
+                      <th class="text-center">S.No</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Mobile </th>
+                      <th>Password</th>
+                      <!-- <th>Address Info</th> -->
+                      <!-- <th>Type</th> -->
+                  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of crops; let i= index;">
+                      <td class="text-center">{{ [i+1] }}</td>
+                      <td><span class="font-bold text-theme">{{data?.name}}</span> </td>
+                      <td><span class="font-bold text-theme">{{data?.email}}</span> </td>
+                      <td><span class="font-bold text-theme">{{data?.mobile}}</span> </td>
+                      <td><span class="font-bold text-theme">{{data?.password}}</span></td>
+                      <!-- <td><span class="font-bold text-theme">{{data?.taxType}}</span></td> -->
+                   
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

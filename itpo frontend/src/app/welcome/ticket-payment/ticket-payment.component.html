@@ -1,0 +1,104 @@
+<div class="container">
+  <div id="content" role="main">
+    <div class="app-content-body">
+      <div class="wrapper-md">
+        <div class="panel b-a">
+          <div class="panel-body">
+            <div class="col-md-12">
+              <legend>
+                <span class="font-weight-600">Payment </span>
+                <!-- <span class="font-weight-600">Add Ticket Details</span> -->
+              </legend>
+            </div>
+            <div style="overflow-x: auto" class="table-responsive"></div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Mobile Number</th>
+                  <th>Date</th>
+                  <th>Price</th>
+                  <th>Citizen Type</th>
+                  <th>TicketType</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of ticketData; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ item?.name }}</td>
+                  <td>{{ item?.email }}</td>
+                  <td>{{ item?.mobile }}</td>
+                  <td>{{ item?.date }}</td>
+                  <td>{{ item?.price }}</td>
+                  <td>{{ item?.citizentype }}</td>
+                  <td>
+                    <span *ngIf="item?.ticketid === '63f344ce76d234fb4402352b'"
+                      >Adult</span
+                    >
+                    <span *ngIf="item?.ticketid === '636b00c990351e553fa1afa5'"
+                      >Child</span
+                    >
+                    <!-- <span *ngIf="item?.ticketid === '636b010d90351e553fa1afa7'"
+                      >Season Ticket All 9 Non-Buisnees Days</span
+                    >
+                    <span *ngIf="item?.ticketid === '636b017790351e553fa1afab'"
+                      >Daily Ticket</span
+                    > -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <span>Total Amount TO be Paid:{{ pendingAmount }}</span>
+            <button onclick="document.icici.submit();">Pay Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <!-- action="https://securegw.paytm.in/order/process" -->
+  <!-- <form method="post" action="https://securegw.paytm.in/order/process" name="paytm">
+    <table >
+
+       <tbody>
+          <input type="hidden" name="MID" value="{{parmasData['MID']}}">
+          <input type="hidden" name="WEBSITE" value="{{parmasData['WEBSITE']}}">
+          <input type="hidden" name="INDUSTRY_TYPE_ID" value="{{parmasData['INDUSTRY_TYPE_ID']}}">
+          <input type="hidden" name="CHANNEL_ID" value="{{parmasData['CHANNEL_ID']}}">
+          <input type="hidden" name="ORDER_ID" value="{{parmasData['ORDER_ID']}}">
+          <input type="hidden" name="CUST_ID" value="{{parmasData['CUST_ID']}}">
+          <input type="hidden" name="MOBILE_NO" value="{{parmasData['MOBILE_NO']}}">
+          <input type="hidden" name="EMAIL" value="{{parmasData['EMAIL']}}">
+          <input type="hidden" name="TXN_AMOUNT" value="{{parmasData['TXN_AMOUNT']}}">
+          <input type="hidden" name="CALLBACK_URL" value="{{parmasData['CALLBACK_URL']}}">
+          <input type="hidden" name="CHECKSUMHASH" value="{{cheksumData}}">
+       </tbody>
+    </table>
+    <script type="text/javascript">
+
+    </script>
+ </form> -->
+  <form method="POST" action="https://eazypay.icicibank.com/EazyPG">
+    <input type="hidden" name="merchantid" value="234165" />
+    <input type="hidden" name="mandatory_fields" value="456789|45|10|x|x|x|x" />
+    <input type="hidden" name="optional_fields" value="" />
+    <input
+      type="hidden"
+      name="returnurl"
+      value="https://onlinespacebooking.indiatradefair.com/litf2k20/frontend/web/site/payresponse"
+    />
+    <input type="hidden" name="ReferenceNo" value="456789" />
+    <input type="hidden" name="submerchantid" value="45" />
+    <input
+      type="hidden"
+      name="transaction_amount"
+      value="{{ parmasData['TXN_AMOUNT'] }}"
+    />
+    <input type="hidden" name="paymode" value="9" />
+    <input type="submit" value="Proceed to Payment" />
+  </form>
+</div>

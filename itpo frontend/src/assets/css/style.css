@@ -1,0 +1,491 @@
+.form-horizontal .control-label{
+    text-align: left !important;
+}
+.deal_div{
+    margin-right: 15px;
+    width:130px;
+    padding:10px 0px;
+    text-align: center;
+    border: 1px solid #CFDADD !important;
+    background: white;
+}
+.deal_div:last-child{
+    margin-right: 0;
+}
+.Attach{
+    border: 1px solid #CCCCCC;
+    height: 25px;
+}
+.bt{
+    margin-left: 1%;
+}
+#upload_link{
+    text-decoration:none;
+}
+#upload{
+    display:none
+}
+.c-btn{
+    border:1px solid red;
+     width:50px;
+      background:white;
+       color:red;
+       border-radius:5px;
+       margin-left: .7%;
+       font-size: 14px;
+       font-weight: normal;
+}
+.c-bt{
+    width:70px;
+    background:white;
+       color:red;
+       border-radius:5px;
+       margin-left: .7%;
+       border:1px solid red;
+       font-size: 14px;
+       font-weight: normal;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title:after {
+   
+    content:none !important;
+ 
+}
+.app-content-body{
+    background-color: #F2F2F2;
+}
+.main{ 
+    background: #e0f0c2;
+    color:#000000;
+    /* height:87px; */
+} 
+.panel {
+    background: #FFFFFF;
+    border-radius: 10px !important;
+    
+}
+.panel-heading{
+    background: #e8e8e8 !important;
+    border-radius: 10px 10px 0px 0px !important;
+    /* min-height: 70px;
+    padding-top: 2.5%;
+    font-size: 1.5rem; */
+}
+.panel-heading p {
+    font-size: 13px;
+    color: #afafaf;
+    margin-bottom: 0;
+}
+.labelInfo {
+    color: #afafaf;
+    font-size: 12px;
+    font-style: italic;
+}
+.form-group label {
+    color: #58666e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+.info-select-box {
+    display: flex;
+    align-items: center;
+}
+.info-select-box i {
+    margin-left: 10px;
+    color: #80c3e5;
+}
+.bTop{
+    border-top: 1px solid #cfdadd;
+    margin: 10px 0 20px;
+}
+.assessorsAddress
+{
+    margin-top: 0;
+    font-size: 15.5px;
+    color: #333;
+}
+.annualApplicantRupee
+{
+    margin-top: 4.2rem;
+}
+.annualOrganizationRupee
+{
+    margin-top: 4.3rem;
+}
+.addContact {
+    border: 1px solid #808080;
+    padding: 5px;
+    border-radius: 5px;
+    background: #ebebeb;
+}
+.panel .panel-body  h5
+{
+    color: black;
+}
+.form-group    .alert-success
+{
+    padding: 2px;
+}
+.info-circle-alert {
+    padding: 15px 34px;
+}
+.modal-dialog 
+{
+    width: 35%;
+}
+.form-control.Remark{
+    border-radius: unset !important;
+}
+.form-control{
+    border-radius: 6px;
+}
+
+
+.light{
+    border-radius: 1rem;
+    border: 1px solid gray;
+    background: #FFFFFF;
+    color: gray;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 12px;
+}
+.dark{
+
+    border-radius: 1rem ;
+    border: 1px solid #3DC46F;
+    background: #FFFFFF;
+    color: #3DC46F;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 12px;
+
+}
+.danger{
+    border-radius: 1rem;
+    border: 1px solid #FE443A;
+    background: #FFFFFF;
+    color: #FE443A;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 12px;
+   
+}
+.menu-button{
+    padding: 10px;
+}
+.address{
+    width: 80.933343%!important;
+}
+.upper-add{
+    width: 16.3% !important;
+}
+.upbt{
+    margin-left: 3px;
+}
+.upper-heding{
+    color: #333333;
+    font-size: 15.5px;
+}
+.upper-heding-button{
+    border-radius: 7px;
+    height: 27px;
+    border:1px solid gray;
+    background: #FFFFFF;
+    color: #000000;
+}
+.tbl{
+border:1px solid #CFDADD;
+
+}
+.tbl tr th{
+    border:1px solid #CFDADD; 
+}
+.tbl-input{
+    border:1px solid #CFDADD; 
+    width:100px;
+    height: 30px;
+    border-radius: none;
+}
+.tbl-input.form-control{
+    border-radius: none;
+    border-radius: 0px;
+}
+.link-dropdown{
+    margin-left: 86% !important;
+    height: 70px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 2;
+    font-size: 13px;
+}
+.box-dropdown{
+   border:none;
+   background: #EDF1F2;
+}
+.dropdownsystem{
+    border-left: 3px solid #27C24C;
+  
+}
+.nav{
+    background-color: #FFFFFF;
+}
+
+/* 1-oct-21 */
+/*
+ .main{ 
+    background: #e0f0c2;
+    color:#000000;
+    height:87px;
+} 
+.pull-right{
+    float: right!important;
+    margin-right: 9%;
+}
+
+.Applicant-view{
+    font-size: 13.5px;
+    font-weight: bold;
+    padding: 10px;
+} */
+
+/* 14-oct-21 start */
+.dotted{
+    border-style: dotted;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: 3%;
+    margin-right: 3%;
+    color: #f4f4f4;
+    word-spacing: normal;
+    } 
+.applicant-detail{
+        margin-left:3% ;
+        font-weight: bold;
+        font-size: 16px;
+        color: black;
+    }
+.checkbox-cls{
+        font-size: small;
+        font-weight: 500;
+        color: #808080;
+        margin-right: 35px;
+    }
+.panel-default>.panel-headings {
+        font-size: 16.5PX;
+        margin-top: 2%;
+        margin-left: 28px;
+        
+    }
+
+.add-more{
+        text-align: right;
+        margin-right:18px;
+        font-size: 18px;
+        font-weight: bold;
+
+   }
+
+.aaplicants-id{
+  
+    font-weight: 700;
+}
+.add-tags{
+    width: 86px; 
+    border-radius: 25px;
+    border: 2px solid;
+    text-align: center;
+    width: 92px;
+    background: white;
+    margin-top: -2%;
+ 
+}
+.left-arrow{
+    font-size: 25px;
+    font-weight: bold;
+}
+.header-btn{
+    padding-top: 11px;
+}
+.Country-name{
+    margin-right:3%;
+}
+.selectpicker{
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    font-weight: lighter;
+}
+.app-id{
+    color:red;
+    font-size: 13px;
+}  
+.abc{
+    color:red;
+}
+.abc-cls{
+    color: #918c8c;
+}
+.icon{
+    color: red;
+}
+.btn-cls{
+    width:50px;
+    height: 30px;
+    padding: 0px 12px !important;
+}
+.view-list{
+   font-weight: bold;
+}
+td p {
+    font-size: 12px;
+    margin: 1px;
+}
+.xs-m{
+    float: right;
+}
+.btn-default.btn-bg-m{
+   background-color: #a1cf4f;
+    
+  }
+.f-px-11{
+    padding-left: 55px;
+}
+
+.header-btn{
+    padding-bottom: 10px;
+}
+.view-action-class ul li{
+    border: 1px solid #e7e7e7;
+}
+.icons-classes{
+    padding-right: 9px;
+}
+
+a.app-underline{
+    text-decoration: none !important;
+}
+.applicant-id{
+    width: 11%;
+}
+.txt-clr{
+    color: white;
+}
+.senior-assessor a{
+    color: #718bef;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.senior-calibrator a{
+    color: #718bef;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+
+}
+.assessent-label{
+   display: flex;
+   font-size: 9px;
+   padding-top: 10px ;
+   font-weight: 600;
+  
+}
+.team-reset-btn{
+    color: #a1cf4f !important;
+    background: white;
+    border-radius: 8px 8px !important;
+    font-size: 12px !important;
+}
+.team-submit-btn{
+    color: white !important;
+    background: #a1cf4f !important;
+    border: 2px solid #a1cf4f !important;
+    border-radius: 8px 8px !important;
+    font-size: 12px !important;
+}
+.questionnaire-name{
+    font-size: 11px;
+    margin-right: 0px;
+    font-weight: 600;
+}
+.questionnaire-text input{
+    font-size: 13px;
+}
+.questionnaire-button{
+    background: #a1cf4f !important;
+    border: 2px solid #a1cf4f !important;
+}
+.errorcontrols {
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+/* 14-oct-21 */
+@media screen and (max-width: 320px) {
+    .box12 {
+      margin-left: -89px;
+    }
+    .login-outer{
+        display: none;
+      } 
+    .box-img{
+       display: none;
+    }
+    .material-icon{
+        display:none;
+    }
+   
+  }
+@media screen and (min-device-width: 321px) and (max-device-width: 375px){
+    .login-outer{
+        display: none;
+      } 
+    .box-img{
+       display: none;
+    }
+    .material-icon{
+        display:none;
+    }
+    .box12 {
+        margin-left: -89px;
+      }
+    
+}
+@media screen and (min-device-width: 376px) and (max-device-width: 425px){
+    .login-outer{
+        display: none;
+      } 
+    .box-img{
+       display: none;
+    }
+    .material-icon{
+        display:none;
+    }
+    .box12 {
+        margin-left: -89px;
+      }
+    
+}
+@media screen and (min-device-width: 426px) and (max-device-width: 768px){
+    .login-outer{
+        display: none;
+      } 
+    .box-img{
+       display: none;
+    }
+    .material-icon{
+        display:none;
+    }
+   .col-sm-6{
+      width: 100% !important;
+      font-size: 1rem;
+   }
+   .box12 {
+    margin-left: 25px;
+  }
+}
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px){
+
+}

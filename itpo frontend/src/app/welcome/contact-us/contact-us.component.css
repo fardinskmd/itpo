@@ -1,0 +1,18 @@
+.contact-box {
+    border: 3px solid #ddd;
+    padding: 1rem;
+}
+
+.contact-cont a {
+    color: blue;
+}
+.contact-cont h4{
+    color: #000;
+}
+
+.contact-cont p {
+    margin: 4px 0;
+}
+.wrapper-md {
+    padding: 20px 0;
+}

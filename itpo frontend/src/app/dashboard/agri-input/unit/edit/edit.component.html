@@ -1,0 +1,78 @@
+
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <!-- main header -->
+    <div class="bg-blue lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="m-n font-thin text-white">Unit</h3>
+        </div>
+        <div class="col-sm-6 text-right poppins hidden-xs">
+
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div  class="wrapper-md">
+      <div class="panel b-a">
+        <div class="panel-body">
+          <form role="form" [formGroup]="unit"  autocomplete="off">
+            <div class="row">
+              <div class="col-md-12">
+                <legend>
+                  <span  class="font-weight-600">Edit Unit</span>
+                </legend>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label font-weight-600">Unit Code *</label>
+                  <input formControlName="unitCode" type="text" class="form-control" (focusout)="checkCode($event)">
+
+                  <p *ngIf="unit.get('unitCode')?.hasError('required')&&(submitted||unit.get('unitCode')?.dirty||unit.get('unitCode')?.touched )"
+                  style="color: red;">
+                  Unit Code <strong>Required</strong>
+                </p>
+                     <p *ngIf="unit.get('unitCode')?.hasError('isExist')&&!unit.get('unitCode')?.hasError('required')&&(submitted||unit.get('unitCode')?.dirty||unit.get('unitCode')?.touched )"
+                style="color: red;">
+                Unit Code <strong>Already Exist</strong>
+              </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label font-weight-600">Unit Name*</label>
+                  <br>
+                  <input formControlName="unitName" type="text" class="form-control" >
+
+                  <p *ngIf="unit.get('unitName')?.hasError('required')&&(submitted||unit.get('unitName')?.dirty||unit.get('unitName')?.touched )"
+                  style="color: red;">
+                  Unit Name<strong>Required</strong>
+                </p>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <hr />
+            <div class="button-right">
+              <div class="row">
+                <div class="col-md-12">
+                   <a class="btn m-b-xs btn-md btn-success mr-5" style="margin-right:1.5px ;" (click)="onSubmit()">Update</a>
+
+                  <!-- <a class="btn m-b-xs btn-md btn-primary mr-5 " style="margin-right:1.5px ;"  (click)="onSubmitNew()">Save and New</a> -->
+                  <a class="btn m-b-xs btn-md btn-default mr-5" style="margin-right:1.5px ;" (click)="cancel()">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,186 @@
+/* .navbar-brand img {
+    display: inline;
+    width: 24rem;
+    vertical-align: middle;
+} */
+/* .navbar-header{
+        width: 125px;
+} */
+.navbar-inverse {
+    background-color: #3c0002;
+    border-color: #080808;
+    padding: 2rem;
+}
+
+.dropdown {
+    background-color: #3c0002;
+
+}
+
+.dropdown .dropdown-toggle {
+    color: #ffffff;
+    clip-path: ellipse();
+}
+
+.navbar-nav {
+    margin: 7px 0 0 0;
+}
+
+.active a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #3c0002;
+}
+
+.active a:hover {
+    background-color: #3c0002;
+}
+
+.active a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+
+.active a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.login-btn{
+        text-align: end;
+            position: absolute;
+            right: 4rem;
+            bottom: 4.1rem;
+}
+
+.navbar-brand img {
+    display: inline;
+    width: 73px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 769px) {
+    .menu-btn {
+        display: none;
+    }
+   
+
+
+
+}
+
+@media only screen and (max-width: 768px) and (min-width:200px) {
+    .navbar-nav {
+        display: none;
+    }
+         .login-btn {
+             display: none;
+         }
+
+}
+
+@media only screen and (max-width: 425px) and (min-width:200px) {
+
+    .navbar-inverse {
+        padding: 1rem !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+    top: 6rem;
+    text-align: end;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu-btn {
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 3rem;
+    right: 2rem;
+    color: #ffffff;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 1024px) {
+    .navbar-header {
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+    .nav>li>a {
+        padding: 10px 9px;
+        font-size: 14px;
+    }
+
+    .navbar-nav {
+        margin: 18px 0 0 0;
+
+    }
+
+    .navbar-header {
+        width: fit-content !important;
+    }
+}
