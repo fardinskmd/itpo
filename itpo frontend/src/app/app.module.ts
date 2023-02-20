@@ -6,16 +6,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
 import { DatePipe } from '@angular/common';
-import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
-
-
-
+// import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaymentGatewayComponent,
-
+    // PaymentGatewayComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +22,6 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
     HttpClientModule,
   ],
   providers: [DatePipe],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

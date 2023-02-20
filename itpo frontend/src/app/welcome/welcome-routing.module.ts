@@ -11,7 +11,7 @@ import { TicketPaymentComponent } from './ticket-payment/ticket-payment.componen
 import { TicketComponent } from './ticket/ticket.component';
 import { ThankuComponent } from './thanku/thanku.component';
 import { PaymentFailedComponent } from './payment-failed/payment-failed.component';
-import { PaymentGatewayComponent } from '../payment-gateway/payment-gateway.component';
+// import { PaymentGatewayComponent } from '../payment-gateway/payment-gateway.component';
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
   { path: 'about-us', component: AboutUsComponent },
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'refund-cancellation', component: RefundAndCancellationComponent },
   { path: 'add-ticket', component: AddTicketComponent },
-  { path: 'pay/:id', component: PaymentGatewayComponent },
+  // { path: 'pay/:id', component: PaymentGatewayComponent },
   { path: 'ticket/:id', component: TicketComponent },
   { path: 'thankuPage', component: ThankuComponent },
   { path: 'failure', component: PaymentFailedComponent },

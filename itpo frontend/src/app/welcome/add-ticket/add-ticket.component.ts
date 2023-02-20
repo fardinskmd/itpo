@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 import { HttpService } from 'src/app/shared/services/http.service';
 // import { url } from 'inspector';
 import { DatePipe } from '@angular/common';
-import { PaymentGatewayComponent } from 'src/app/payment-gateway/payment-gateway.component';
+// import { PaymentGatewayComponent } from 'src/app/payment-gateway/payment-gateway.component';
 import * as CryptoJS from 'crypto-js';
 import { encode } from 'base-64';
 @Component({
@@ -35,7 +35,6 @@ export class AddTicketComponent implements OnInit {
   parmasData: any;
 
   constructor(
-    
     private fb: FormBuilder,
     private activedRoute: ActivatedRoute,
     private httpService: HttpService,
@@ -72,7 +71,7 @@ export class AddTicketComponent implements OnInit {
       ORDERID: [ORDERID],
     });
 
-    console.log(this.myForm.value);
+    console.log('value: ', this.myForm.value);
   }
 
   ngOnInit(): void {
@@ -154,31 +153,29 @@ export class AddTicketComponent implements OnInit {
       j--;
     }
   }
-  calculate(i:any) {
+  calculate(i: any) {
     console.log(i);
     let controls = this.myForm.get('arr') as FormArray;
-    let option:any=controls.at(i).get('ticketid');
-    let opt=option.value;//price
+    let option: any = controls.at(i).get('ticketid');
+    let opt = option.value; //price
     //console.log(opt);
-    
-    let num:any=controls.at(i).get('count')//count
+
+    let num: any = controls.at(i).get('count'); //count
     //console.log("count=",num.value);
-    let totalAmount=Number(opt)*Number(num.value);
+    let totalAmount = Number(opt) * Number(num.value);
     //console.log(totalAmount);
     //this.myForm.value.totalPrice=totalAmount;
     controls.at(i).get('totalPrice')?.setValue(totalAmount);
-    let sum=0;
-    for(let j=0;j<controls.length;j++){
+    let sum = 0;
+    for (let j = 0; j < controls.length; j++) {
       //find total amount from all list
-      sum=sum+Number(controls.at(j).get('totalPrice')?.value);
-      
+      sum = sum + Number(controls.at(j).get('totalPrice')?.value);
     }
-   // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
-      this.myForm.get('totalPrice')?.setValue(sum);
+    // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
+    this.myForm.get('totalPrice')?.setValue(sum);
     // let total:any=document.getElementById("totalPre");
     // total.value=totalAmount;
-    
-   
+
     //console.log(option.value);
   }
 
@@ -204,14 +201,13 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
-    let sum=0;
-    for(let k=0;k<controls.length;k++){
+    let sum = 0;
+    for (let k = 0; k < controls.length; k++) {
       //find total amount from all list
-      sum=sum+Number(controls.at(k).get('totalPrice')?.value);
-      
+      sum = sum + Number(controls.at(k).get('totalPrice')?.value);
     }
-   // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
-      this.myForm.get('totalPrice')?.setValue(sum);
+    // let totalCount = Number(this.myForm.get('totalPrice')?.value) + totalAmount;
+    this.myForm.get('totalPrice')?.setValue(sum);
   }
 
   onSubmit() {
@@ -310,12 +306,12 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
-    this.calculate(i)
+    this.calculate(i);
   }
 
   decrement(i: any) {
     let controls = this.myForm.get('arr') as FormArray;
-    
+
     let count = 0;
     if (Number(controls.at(i).value.count) != 0) {
       count = Number(controls.at(i).value.count) - 1;
@@ -347,7 +343,7 @@ export class AddTicketComponent implements OnInit {
       this.myForm.updateValueAndValidity();
       j--;
     }
-    this.calculate(i)
+    this.calculate(i);
   }
 
   payNow() {
@@ -364,7 +360,7 @@ export class AddTicketComponent implements OnInit {
           this.cheksumData = data?.data;
           this.parmasData = data?.params;
           // Swal.fire('Ticket Booked Succsefully Please Check Your Email and Phone','','success')
-          // location.reload()
+          // location.reload()2300072941601260
         },
         (err: any) => {
           // Swal.fire('Something went Wrong','','error')
@@ -379,7 +375,7 @@ export class AddTicketComponent implements OnInit {
     'https://onlinespacebooking.indiatradefair.com/iitf2k20/frontend/web/site/payresponse';
   referenceNo: string = Math.floor(100000 + Math.random() * 900000).toString();
   subMerchantId: string = '45';
-  transactionAmount: string = '2000';
+  transactionAmount: string = this.myForm?.get('totalPrice')?.value;
   payMode: string = '9';
   name: string = 'x';
   bookingId: string = 'x';
@@ -403,7 +399,7 @@ export class AddTicketComponent implements OnInit {
   onFormSubmit(): void {
     const mandatoryFieldsEncrypted = this.encryptFile(
       this.aesKey,
-      this.mandatoryFields
+      `${this.referenceNo}|${this.subMerchantId}|${this.myForm.value.totalPrice}|${this.name}|${this.bookingId}|${this.eventName}|${this.participationType}`
     );
     const optionalFieldsEncrypted = this.encryptFile(
       this.aesKey,
@@ -420,19 +416,19 @@ export class AddTicketComponent implements OnInit {
     );
     const transactionAmountEncrypted = this.encryptFile(
       this.aesKey,
-      this.transactionAmount
+      String(this.myForm.value.totalPrice)
     );
     const payModeEncrypted = this.encryptFile(this.aesKey, this.payMode);
     console.log(
       mandatoryFieldsEncrypted,
       optionalFieldsEncrypted,
       returnUrlEncrypted,
-      referenceNoEncrypted
+      referenceNoEncrypted,
+      transactionAmountEncrypted
     );
 
     const url = `https://eazypay.icicibank.com/EazyPG?merchantid=234165&mandatory fields=${mandatoryFieldsEncrypted}&optional fields=&returnurl=${returnUrlEncrypted}&Reference No=${referenceNoEncrypted}&submerchantid=${subMerchantIdEncrypted}&transaction amount=${transactionAmountEncrypted}&paymode=${payModeEncrypted}`;
 
     window.location.href = url;
   }
-  
 }

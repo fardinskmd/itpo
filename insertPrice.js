@@ -5,8 +5,8 @@ const uri =
   "mongodb+srv://fardindev:OQQXVTimjmG6LspR@cluster0.tkbjee1.mongodb.net/tickets";
 
 // Database and collection names
-const dbName = "mydb";
-const collectionName = "mycollection";
+const dbName = "tickets";
+const collectionName = "prices";
 
 // Data to be inserted
 const data = {
