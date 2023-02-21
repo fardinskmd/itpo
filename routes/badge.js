@@ -26,4 +26,5 @@ route.get('/gettotalscaneeduserdata',badge.gettotalscaneeduserdata)
 route.get('/gettotalscaneeduserdatainadmin',badge.gettotalscaneeduserdatainadmin)
 route.get('/gettotalpayment',badge.gettotalpayment)
 route.get('/getbadgebyurnnumber/:urnno',badge.getbadgebyurnnumber)
+route.post('/thankuPage',badge.thankuPage)
 module.exports=route

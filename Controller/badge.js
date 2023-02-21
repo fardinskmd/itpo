@@ -77,7 +77,10 @@ const sendMail = async (email, name, price, date, urnno, citizentype) => {
     }
   });
 };
-
+exports.thankuPage = (req, res) => {
+  console.log(req.body);
+  res.status(200).send("success");
+};
 exports.paynow = (req, res) => {
   var paymentDetails = {
     amount: req.body.price,
@@ -120,6 +123,7 @@ exports.paynow = (req, res) => {
       });
   }
 };
+
 
 exports.callback = async (req, res) => {
   // console.log(req.body)
