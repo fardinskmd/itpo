@@ -55,11 +55,11 @@ export class ThankuComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const responseCode = this.route.snapshot.queryParamMap.get('ResponseCode');
+    const responseCode = this.route.snapshot.queryParamMap.get('Response Code');
     const referenceNo = this.route.snapshot.queryParamMap.get('ReferenceNo');
     const subMerchantId =
       this.route.snapshot.queryParamMap.get('SubMerchantId');
-    const amount = this.route.snapshot.queryParamMap.get('Amount');
+    const amount = this.route.snapshot.queryParamMap.get('Transaction Amount');
 
     const url = `https://www.itpotickets.com/thankuPage`;
 
