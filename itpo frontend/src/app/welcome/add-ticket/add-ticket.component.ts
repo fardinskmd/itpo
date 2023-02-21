@@ -371,8 +371,7 @@ export class AddTicketComponent implements OnInit {
   aesKey: string = '2300072941601260';
 
   optionalFields: string = '';
-  returnUrl: string =
-    'https://onlinespacebooking.indiatradefair.com/iitf2k20/frontend/web/site/payresponse';
+  returnUrl: string = 'https://www.itpotickets.com/thankuPage';
   referenceNo: string = Math.floor(100000 + Math.random() * 900000).toString();
   subMerchantId: string = '45';
   transactionAmount: string = this.myForm?.get('totalPrice')?.value;

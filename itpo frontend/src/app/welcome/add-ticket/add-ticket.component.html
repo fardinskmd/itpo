@@ -20,19 +20,13 @@
                     <div class="row form_field_outer_row">
                       <div class="form-group col-md-3">
                         <select
-                          
                           formControlName="ticketid"
                           class="form-control"
                           (change)="calculate(i)"
                         >
-                          <option value="0">
-                          Choose citizen type
-                          </option><option value="20">
-                            Adult
-                          </option>
-                          <option value="10">
-                            Child
-                          </option>
+                          <option value="0">Choose citizen type</option>
+                          <option value="20">Adult</option>
+                          <option value="10">Child</option>
                         </select>
                       </div>
                       <div
@@ -74,11 +68,10 @@
                           <button
                             class="btn btn-default"
                             (click)="decrement(i)"
-                            
                           >
                             -
                           </button>
-                          <input 
+                          <input
                             class="form-control"
                             readonly
                             style="
@@ -89,12 +82,10 @@
                             formControlName="count"
                             type="text"
                             readonly
-                            
                           />
                           <button
                             class="btn btn-default"
                             (click)="increment(i)"
-                            
                           >
                             +
                           </button>
@@ -102,7 +93,7 @@
                       </div>
                       <div class="form-group col-md-2">
                         <input
-                        id="totalPre"
+                          id="totalPre"
                           readonly
                           name="total"
                           formControlName="totalPrice"
@@ -159,6 +150,7 @@
                               type="email"
                               class="form-control"
                               formControlName="email"
+                              minlength="4"
                             />
                           </div>
                           <div class="form-group">

@@ -61,7 +61,7 @@ export class ThankuComponent implements OnInit {
       this.route.snapshot.queryParamMap.get('SubMerchantId');
     const amount = this.route.snapshot.queryParamMap.get('Amount');
 
-    const url = `https://onlinespacebooking.indiatradefair.com/iitf2k20/frontend/web/site/payresponse`;
+    const url = `https://www.itpotickets.com/thankuPage`;
 
     const payload = {
       responseCode: responseCode,
