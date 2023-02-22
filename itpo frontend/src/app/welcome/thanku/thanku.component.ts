@@ -34,7 +34,7 @@ import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-payment-response',
+  selector: 'app-thanku',
   template: `
     <div *ngIf="isLoading">Loading...</div>
     <div *ngIf="!isLoading">
@@ -42,14 +42,15 @@ import { HttpClient } from '@angular/common/http';
     </div>
   `,
 })
-export class PaymentResponseComponent implements OnInit {
+export class ThankuComponent implements OnInit {
   isLoading = true;
-  message = '';
+  message = 'welcome to the page';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     const responseCode = 'E000'; // replace with actual response code
+    console.log('response code=', responseCode);
 
     this.http.get(`/thankuPage?Response_Code=${responseCode}`).subscribe(
       (res: any) => {
