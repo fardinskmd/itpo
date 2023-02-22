@@ -36,7 +36,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-response-handler',
   template: `
     <div *ngIf="processing">
-      <h2>Processing Payment...</h2>
+      <h2>ThANK YOU...</h2>
     </div>
     <div *ngIf="paymentResult">
       <h2>Payment {{ paymentResult.success ? 'Successful' : 'Failed' }}</h2>
@@ -63,28 +63,29 @@ export class ThankuComponent implements OnInit {
 
     const url = `https://onlinespacebooking.indiatradefair.com/iitf2k20/frontend/web/site/payresponse`;
 
-    const payload = {
-      responseCode: responseCode,
-      referenceNo: referenceNo,
-      subMerchantId: subMerchantId,
-      amount: amount,
-    };
+    // const payload = {
+    //   responseCode: responseCode,
+    //   referenceNo: referenceNo,
+    //   subMerchantId: subMerchantId,
+    //   amount: amount,
+    // };
 
-    this.http.post(url, payload).subscribe(
-      (data: any) => {
-        this.paymentResult = {
-          success: true,
-          message: 'Payment received and saved',
-        };
-        this.processing = false;
-      },
-      (error) => {
-        this.paymentResult = {
-          success: false,
-          message: 'Error saving payment: ' + error,
-        };
-        this.processing = false;
-      }
-    );
+    // this.http.post(url, payload).subscribe(
+    //   (data: any) => {
+    //     this.paymentResult = {
+    //       success: true,
+    //       message: 'Payment received and saved',
+    //     };
+    //     this.processing = false;
+    //   },
+    //   (error) => {
+    //     this.paymentResult = {
+    //       success: false,
+    //       message: 'Error saving payment: ' + error,
+    //     };
+    //     this.processing = false;
+    //   }
+    // );
+    console.log('hi from front');
   }
 }
