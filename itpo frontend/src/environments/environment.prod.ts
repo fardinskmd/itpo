@@ -8,6 +8,6 @@ export const environment = {
   // download: 'http://localhost:3000/uploads/'
   // serverUrl: 'https://www.iitf2022tickets.com/',
   // download: 'https://www.iitf2022tickets.com/uploads/',
-  serverUrl: 'https://itpotickets.com:5000/',
-  download: 'https://itpotickets.com:5000/uploads/',
+  serverUrl: 'https://www.itpotickets.com/',
+  download: 'https://www.itpotickets.com/uploads/',
 };
